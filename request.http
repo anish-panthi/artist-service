@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/artists
+Content-Type: application/json
+
+{
+  "name": "David Guetta",
+  "genre": "Electro",
+  "origin": "France"
+}
