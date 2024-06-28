@@ -5,6 +5,8 @@ import dev.app.artist.api.entity.Artist;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+
+import io.micrometer.observation.annotation.Observed;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Log4j2
+@Observed(name="artist_service", contextualName = "artist_service")
 public class ArtistService {
 
   private final JdbcClient jdbcClient;
